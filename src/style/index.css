@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300..700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Jura", sans-serif;
+  list-style-type: none;
+}
+* body {
+  background: url(".././img/background.svg");
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  color: #FFFFF8;
+  padding: 0 70px;
+  background: rgba(0, 50, 41, 0.5882352941);
+}
+nav .title {
+  display: flex;
+  align-items: center;
+}
+nav .title h1 {
+  font-size: 3rem;
+  color: #95CA20;
+  font-weight: 600;
+}
+nav .title h1 span {
+  color: #FFFFF8;
+}
+nav .menu {
+  display: flex;
+  align-items: center;
+}
+nav .menu ul {
+  display: flex;
+  align-items: center;
+}
+nav .menu ul li {
+  padding: 0 20px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  position: relative;
+}
+nav .menu ul li:hover {
+  cursor: pointer;
+}
+nav .menu ul li:hover::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 4px;
+  background: #95CA20;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: -10px;
+}
+nav .research {
+  position: absolute;
+  top: 120px;
+  left: 50%;
+  min-width: 735px;
+  transform: translateX(-50%);
+  z-index: -10;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(255, 255, 248, 0.2784313725);
+  border-radius: 10px;
+}
+nav .research form {
+  display: flex;
+  align-items: center;
+}
+nav .research form input::-webkit-outer-spin-button,
+nav .research form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+nav .research form input {
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+  margin-right: 20px;
+  font-weight: bold;
+  background: rgba(0, 50, 41, 0.4509803922);
+  color: #FFFFF8;
+}
+nav .research form input:focus {
+  outline: none;
+}
+nav .research form input[type=number] {
+  width: 55px;
+  margin-left: 2px;
+}
+nav .research form select {
+  height: 26px;
+  border-radius: 5px;
+  background: rgba(0, 50, 41, 0.4509803922);
+  color: #FFFFF8;
+}
+nav .research form select:focus {
+  outline: none;
+}
+nav .research form button {
+  background: none;
+  border: none;
+  margin-left: 25px;
+}
+nav .research form button:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=index.css.map */

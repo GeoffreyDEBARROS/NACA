@@ -1,0 +1,102 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    color: $color1;
+    padding: 0 70px;
+    background: #00322996;
+    .title {
+        display: flex;
+        align-items: center;
+        h1 {
+            font-size: 3rem;
+            color: $color2;
+            font-weight: 600;
+            span {
+
+                color: $color1;
+            }
+        }
+    }
+    .menu {
+        display: flex;
+        align-items: center;
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                padding: 0 20px;
+                font-size: 1.5rem;
+                font-weight: 500;
+                position: relative;
+                &:hover {
+                    cursor: pointer;
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        width: 70px;
+                        height: 4px;
+                        background: $color2;
+                        right: 50%;
+                        transform: translateX(50%);
+                        bottom: -10px;
+                    }
+                }
+            }
+        }
+    }
+    .research {
+        position: absolute;
+        top: 120px;
+        left: 50%;
+        min-width: 735px;
+        transform: translateX(-50%);
+        z-index: -10;
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        background: #fffff847;
+        border-radius: 10px;
+        form {
+            display: flex;
+            align-items: center;
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+              -webkit-appearance: none;
+              margin: 0;
+            }
+            input {
+                padding: 5px;
+                border-radius: 5px;
+                border: none;
+                margin-right: 20px;
+                font-weight: bold;
+                background: #00322973;
+                color: $color1;
+                &:focus {
+                    outline: none;
+                }
+            }
+            input[type=number] {
+                width: 55px;
+                margin-left: 2px;
+            }
+            select {
+                height: 26px;
+                border-radius: 5px;
+                background: #00322973;
+                color: $color1;
+                &:focus {
+                    outline: none;
+                }
+            }
+                button {
+                    background: none;
+                    border: none;
+                    margin-left: 25px;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+        }
+    }
+}
