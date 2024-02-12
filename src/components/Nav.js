@@ -2,7 +2,8 @@ import React, { useState, useContext } from "react";
 import { ResearchContext } from "../context/ResearchContext";
 
 const Nav = () => {
-  const { research, setResearch } = useContext(ResearchContext);
+  const { research, setResearch, setShowResult } =
+    useContext(ResearchContext);
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -12,9 +13,9 @@ const Nav = () => {
       maxPrice: research.maxPrice,
       category: research.category,
     };
-    console.log(research.keyword);
     localStorage.setItem("research", JSON.stringify(newResearch));
     setResearch(newResearch);
+    setShowResult(true);
   };
 
   const [isResearchVisible, setResearchVisible] = useState(false);

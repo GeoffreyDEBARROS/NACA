@@ -81,14 +81,14 @@ export const announces = [
     description: "Python femelle de 1,5ans, en bonne forme.",
     price: 100,
     category: "Reptiles",
-    img: "img/PythonRoyale",
+    img: "img/PythonRoyale.png",
   },
   {
     title: "Python Royal (Python Regius)",
     description: "Plusieurs jeunes spécimens non sexés",
     price: 60,
     category: "Reptiles",
-    img: "img/PythonRoyale1",
+    img: "img/PythonRoyale1.png",
   },
   {
     title: "Rat dumbo",
@@ -102,6 +102,6 @@ export const announces = [
     description: "Jolis rats bicolore disponibles",
     price: 35,
     category: "Mammal",
-    img: "img/Rat1.png",
+    img: "img/RatBico.png",
   },
 ];

@@ -10,8 +10,12 @@ export const ResearchProvider = ({ children }) => {
     category: "",
   });
 
+  const [showResult, setShowResult] = useState(false);
+
   return (
-    <ResearchContext.Provider value={{ research, setResearch }}>
+    <ResearchContext.Provider
+      value={{ research, setResearch, showResult, setShowResult }}
+    >
       {children}
     </ResearchContext.Provider>
   );

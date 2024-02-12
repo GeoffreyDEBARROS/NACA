@@ -1,0 +1,42 @@
+.result-container {
+    margin-top: 110px;
+    padding: 0 90px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .card {
+        width: 350px;
+        display: flex;
+        padding: 20px;
+        margin-bottom: 10px;
+        background: #fffff84d;
+        color: $color1;
+        border-radius: 20px;
+        transition: 0.1s;
+        box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.451);
+        &:hover {
+            cursor: pointer;
+            transform: scale(103%);
+            box-shadow: 13px 10px 13px 0px rgba(0, 0, 0, 0.451);
+            background: #fffff870;
+        }
+        .img-container {
+            display: flex;
+            align-items: center;
+            img {
+                border-radius: 20px;
+            }
+        }
+        .infos {
+            margin-left: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10px;
+            h2 {
+                font-size: 1rem;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
