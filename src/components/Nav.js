@@ -2,8 +2,7 @@ import React, { useState, useContext } from "react";
 import { ResearchContext } from "../context/ResearchContext";
 
 const Nav = () => {
-  const { research, setResearch, setShowResult } =
-    useContext(ResearchContext);
+  const { research, setResearch, setShowResult } = useContext(ResearchContext);
 
   const handleForm = (e) => {
     e.preventDefault();
@@ -23,6 +22,15 @@ const Nav = () => {
     setResearchVisible(!isResearchVisible);
   };
 
+  const showMenu = () => {
+    let menu = document.querySelector(".menu");
+    if (menu.style.display === "none" || menu.style.display === "") {
+      menu.style.display = "flex";
+    } else {
+      menu.style.display = "none";
+    }
+  };
+
   return (
     <nav>
       <div className="title">
@@ -33,11 +41,17 @@ const Nav = () => {
           <span>NAC</span>A
         </h1>
       </div>
+      <div className="burger-btn" onClick={showMenu}>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
       <div className="menu">
         <ul>
           <li onClick={toggleResearchVisibility}>Recherche</li>
           <li>Accueil</li>
           <li>Connexion</li>
+          <li>Mon compte</li>
         </ul>
       </div>
       {isResearchVisible && (
@@ -91,7 +105,7 @@ const Nav = () => {
               <option value="Arthropods">Arthropodes</option>
               <option value="Other">Autre</option>
             </select>
-            <button onClick={handleForm}>
+            <button onClick={handleForm} id="research-btn">
               <img src="./loupe.svg" alt="Logo loupe" />
             </button>
           </form>

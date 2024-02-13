@@ -4,6 +4,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width:905px) {
+        justify-content: space-around;
+    }
     .card {
         width: 350px;
         display: flex;
@@ -38,5 +41,42 @@
                 margin-bottom: 10px;
             }
         }
+        @media screen and (max-width:905px) {
+            width: 300px;
+        }
+        @media screen and (max-width:810px) {
+            flex-direction: column;
+            width: 200px;
+            .img-container {
+                justify-content: center;
+            }
+            .infos {
+                align-items: center;
+                h2 {
+                    text-align: center;
+                }
+            }
+        }
+        @media screen and (max-width:610px) {
+            width: 160px;
+            .infos {
+
+                h2 {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+        @media screen and  (max-width:525px) {
+            width: 300px;
+            flex-direction: row;
+            .infos {
+
+                h2 {
+                    font-size: 1rem;
+                }
+            }
+        }
+        
+        
     }
 }

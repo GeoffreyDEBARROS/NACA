@@ -4,16 +4,46 @@ nav {
     color: $color1;
     padding: 0 70px;
     background: #00322996;
+    @media screen and (max-width:1090px) {
+        padding: 0 30px;
+    }
+    .burger-btn {
+        position: absolute;
+        right: 40px;
+        top: 40px;
+        height: 30px;
+        width: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        &:hover {
+            cursor: pointer;
+        }
+        span {
+            width: 50px;
+            height: 5px;
+            border-radius: 10px;
+            background: $color1;
+        }
+        @media screen and (min-width:805px) {
+            display: none;
+        }
+    }
     .title {
         display: flex;
         align-items: center;
         h1 {
             font-size: 3rem;
             color: $color2;
-            font-weight: 600;
+            font-weight: 600; 
             span {
 
                 color: $color1;
+            }
+        }
+        @media screen and (max-width:1090px) {
+            h1 {
+                font-size: 2.5rem;
             }
         }
     }
@@ -40,6 +70,33 @@ nav {
                         transform: translateX(50%);
                         bottom: -10px;
                     }
+                }
+            }
+        }
+        @media screen and (max-width:1090px) {
+            ul {
+                li {
+                    font-size: 1.3rem;
+                }
+            }
+        }
+        @media screen and (max-width:803px) {
+            position: absolute;
+            top: 120px;
+            right: 25px;
+            height: 250px;
+            display: none;
+            padding: 20px 10px;
+            border-radius: 10px;
+            color: $color1;
+            background: #003229cd;
+            ul {
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-end;
+                height: 100%;
+                li {
+                    font-size: 1.8rem;
                 }
             }
         }
@@ -97,6 +154,42 @@ nav {
                         cursor: pointer;
                     }
                 }
+        }
+        @media screen and (max-width:803px) {
+            min-width: 50px;
+            width: 55%;
+            left: 25px;
+            transform: translateX(0px);
+            background: #003229cd;
+            height: 300px;
+            form {
+                width: 70%;
+                display: grid;
+                grid-template-areas: 
+                "keyword keyword"
+                "minP minPinput"
+                "maxP maxPinput"
+                "cate cate"
+                "btn btn"
+                ;
+                #research {
+                    grid-area: keyword;
+                }
+                #category {
+                    grid-area: cate;
+                }
+                #research-btn {
+                    grid-area: btn;
+                }
+                input {
+                    background: $color1;
+                    color: $color3;
+                }
+            }
+        }
+        @media screen and (max-width:627px) {
+            top: 390px;
+            width: 80%;
         }
     }
 }
